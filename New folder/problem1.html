@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeSprint - Two Sum</title>
+    <title>Problem 1: Two Sum - CodeSprint</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -51,7 +51,11 @@
             <h2 class="text-xl font-bold mb-4">Code Editor</h2>
             <select id="languageSelector" class="bg-gray-700 text-white p-2 rounded mb-4">
                 <option value="javascript">JavaScript</option>
-                <!-- You can add other languages here but JavaScript is the only one executable in the browser -->
+                <option value="python">Python 3</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+                <option value="c">C</option>
+                <option value="csharp">C#</option>
             </select>
             <div id="editor" class="rounded-lg border border-gray-700"></div>
             <button id="runButton" class="mt-4 bg-purple-500 px-4 py-2 rounded hover:bg-purple-600 transition-colors duration-200">
@@ -72,11 +76,11 @@
         require(['vs/editor/editor.main'], function() {
             const editor = monaco.editor.create(document.getElementById('editor'), {
                 value: `// Write your solution here\nfunction twoSum(nums, target) {\n    // Example:\n    // return [0, 1];\n}`,
-                language: 'javascript', // Default language is JavaScript
+                language: 'javascript', // Default language
                 theme: 'vs-dark'
             });
 
-            // Language selection logic (only JavaScript in this case)
+            // Language selection logic
             document.getElementById('languageSelector').addEventListener('change', function(e) {
                 const language = e.target.value;
                 editor.getModel().setLanguage(language);
@@ -88,17 +92,16 @@
                 const outputDiv = document.getElementById('output');
                 const language = document.getElementById('languageSelector').value;
 
-                // Check for JavaScript execution only
-                if (language === 'javascript') {
-                    try {
+                try {
+                    if (language === 'javascript') {
                         const userFunction = new Function('nums', 'target', code + '\nreturn twoSum(nums, target);');
                         const result = userFunction([2, 7, 11, 15], 9);  // Test input
                         outputDiv.textContent = 'Output: ' + JSON.stringify(result);
-                    } catch (error) {
-                        outputDiv.textContent = 'Error: ' + error.message;
+                    } else {
+                        outputDiv.textContent = 'Execution for ' + language + ' not supported in this frontend';
                     }
-                } else {
-                    outputDiv.textContent = 'Execution for ' + language + ' is not supported in the frontend';
+                } catch (error) {
+                    outputDiv.textContent = 'Error: ' + error.message;
                 }
             });
         });
