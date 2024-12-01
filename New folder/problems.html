@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems - CodeSprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .status-done {
+            color: #10b981; /* Green for completed */
+        }
+        .status-not-done {
+            color: #e53e3e; /* Red for not completed */
+        }
+        .difficulty-easy {
+            color: #10b981; /* Green */
+        }
+        .difficulty-medium {
+            color: #f6e05e; /* Yellow */
+        }
+        .difficulty-hard {
+            color: #e53e3e; /* Red */
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">CodeSprint</div>
+            <nav class="space-x-4">
+                <a href="index.html" class="hover:text-gray-500 transition-colors duration-200">Home</a>
+                <a href="problems.html" class="hover:text-gray-500 transition-colors duration-200">Problems</a>
+                <a href="#" class="hover:text-gray-500 transition-colors duration-200">Contests</a>
+                <a href="#" class="hover:text-gray-500 transition-colors duration-200">Ranking</a>
+                <a href="#" class="hover:text-gray-500 transition-colors duration-200">Discuss</a>
+                <a href="#" class="hover:text-gray-500 transition-colors duration-200">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Problems Table -->
+    <main class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-6 text-center">Problem List</h1>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-gray-800 rounded-lg border border-gray-700">
+                <thead>
+                    <tr class="bg-gray-900 text-white">
+                        <th class="p-3 text-left border-b border-gray-700">Status</th>
+                        <th class="p-3 text-left border-b border-gray-700">No.</th>
+                        <th class="p-3 text-left border-b border-gray-700">Title</th>
+                        <th class="p-3 text-left border-b border-gray-700">Acceptance</th>
+                        <th class="p-3 text-left border-b border-gray-700">Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row: Repeat for each problem -->
+                    <tr class="hover:bg-gray-700 transition-colors duration-200 border-b border-gray-700">
+                        <td class="p-3"><i class="fas fa-check status-done"></i></td>
+                        <td class="p-3">1</td>
+                        <td class="p-3">Two Sum</td>
+                        <td class="p-3">52.3%</td>
+                        <td class="p-3 difficulty-easy">Easy</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700 transition-colors duration-200 border-b border-gray-700">
+                        <td class="p-3"><i class="fas fa-times status-not-done"></i></td>
+                        <td class="p-3">2</td>
+                        <td class="p-3">Longest Substring Without Repeating Characters</td>
+                        <td class="p-3">31.7%</td>
+                        <td class="p-3 difficulty-medium">Medium</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700 transition-colors duration-200 border-b border-gray-700">
+                        <td class="p-3"><i class="fas fa-times status-not-done"></i></td>
+                        <td class="p-3">3</td>
+                        <td class="p-3">Median of Two Sorted Arrays</td>
+                        <td class="p-3">29.5%</td>
+                        <td class="p-3 difficulty-hard">Hard</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700 transition-colors duration-200 border-b border-gray-700">
+                        <td class="p-3"><i class="fas fa-check status-done"></i></td>
+                        <td class="p-3">4</td>
+                        <td class="p-3">Longest Palindromic Substring</td>
+                        <td class="p-3">33.2%</td>
+                        <td class="p-3 difficulty-medium">Medium</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700 transition-colors duration-200">
+                        <td class="p-3"><i class="fas fa-times status-not-done"></i></td>
+                        <td class="p-3">5</td>
+                        <td class="p-3">Container With Most Water</td>
+                        <td class="p-3">52.0%</td>
+                        <td class="p-3 difficulty-medium">Medium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 CodeSprint. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
